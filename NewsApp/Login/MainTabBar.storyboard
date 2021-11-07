@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KOR-y0-KYh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ipx-BQ-mkm">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="KOR-y0-KYh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fsv-FC-1AS">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.94117647058823528" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.25817448856874203" green="0.58371783409114486" blue="0.97907413257832543" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="U1b-aj-aw0" kind="relationship" relationship="viewControllers" id="nqW-6t-pET"/>
+                        <segue destination="abY-uS-8Or" kind="relationship" relationship="viewControllers" id="5Rl-dT-wol"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pej-sP-DZZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="67" y="-40"/>
+        </scene>
+        <!--Новости-->
+        <scene sceneID="TLv-5J-nJQ">
+            <objects>
+                <navigationController id="U1b-aj-aw0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Новости" image="newspaper" catalog="system" selectedImage="newspaper.fill" id="S0X-8l-hpa"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="05y-R1-gb3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7Oj-JZ-qXQ" kind="relationship" relationship="rootViewController" id="PIL-cv-yMA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sMr-fm-z2J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-583" y="582"/>
+        </scene>
+        <!--Расписание-->
+        <scene sceneID="boD-V3-ufy">
+            <objects>
+                <navigationController id="abY-uS-8Or" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Расписание" image="list.bullet.rectangle" catalog="system" selectedImage="list.bullet.rectangle.fill" id="1I8-fO-8x9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E2K-ri-3Ig">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="j93-5r-Qfm" kind="relationship" relationship="rootViewController" id="M1Y-L7-f78"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G3d-1d-YWz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="590"/>
+        </scene>
+        <!--NewsItem-->
+        <scene sceneID="PBk-An-1jj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewsItem" id="7Oj-JZ-qXQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WGg-Oc-Zj2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07W-hc-moK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-583" y="993"/>
+        </scene>
+        <!--TimetableItem-->
+        <scene sceneID="a9y-zP-hww">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TimetableItem" id="j93-5r-Qfm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="S5J-1v-tjv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yby-sV-2lr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="993"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
+        <image name="list.bullet.rectangle.fill" catalog="system" width="128" height="93"/>
+        <image name="newspaper" catalog="system" width="128" height="111"/>
+        <image name="newspaper.fill" catalog="system" width="128" height="111"/>
+    </resources>
+</document>

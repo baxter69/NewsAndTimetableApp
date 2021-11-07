@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kml-Ic-gEf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Расписание-->
+        <scene sceneID="aoQ-9Q-kHg">
+            <objects>
+                <viewController storyboardIdentifier="TimetableViewController" id="Kml-Ic-gEf" customClass="TimetableViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UgA-un-yen">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="поиск по дню / группе / имени тренера" translatesAutoresizingMaskIntoConstraints="NO" id="z7n-my-MMz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="p7C-4c-Opf"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AB6-JJ-y8Q">
+                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" red="0.73659133911132812" green="0.8917812705039978" blue="0.98827332258224487" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="amo-jy-TIn"/>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.94117647058823528" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="z7n-my-MMz" firstAttribute="trailing" secondItem="amo-jy-TIn" secondAttribute="trailing" id="csh-6a-fc9"/>
+                            <constraint firstItem="AB6-JJ-y8Q" firstAttribute="top" secondItem="z7n-my-MMz" secondAttribute="bottom" id="efi-7s-SVB"/>
+                            <constraint firstItem="amo-jy-TIn" firstAttribute="bottom" secondItem="AB6-JJ-y8Q" secondAttribute="bottom" id="g1I-oK-0zw"/>
+                            <constraint firstItem="z7n-my-MMz" firstAttribute="top" secondItem="amo-jy-TIn" secondAttribute="top" id="gjd-u3-tG6"/>
+                            <constraint firstItem="amo-jy-TIn" firstAttribute="trailing" secondItem="AB6-JJ-y8Q" secondAttribute="trailing" id="nnn-DR-dak"/>
+                            <constraint firstItem="AB6-JJ-y8Q" firstAttribute="leading" secondItem="amo-jy-TIn" secondAttribute="leading" id="nwn-7L-60V"/>
+                            <constraint firstItem="z7n-my-MMz" firstAttribute="leading" secondItem="amo-jy-TIn" secondAttribute="leading" id="t9T-co-OwM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Расписание" id="pme-pN-2s2"/>
+                    <connections>
+                        <outlet property="searchBar" destination="z7n-my-MMz" id="FxN-yx-PxC"/>
+                        <outlet property="timetableTableView" destination="AB6-JJ-y8Q" id="Qma-k0-fAF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lEX-ZR-3fh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="198.55072463768118" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
