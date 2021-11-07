@@ -31,7 +31,6 @@ class TimetableViewController: UIViewController {
     
     @objc func addButtonPressed(sender: AnyObject) {
         guard let timetableEditVC = UIStoryboard.timetableEdit.instantiateViewController(withIdentifier: "\(TimetableEditViewController.self)") as? TimetableEditViewController else { return }
-        //timetableEditVC.timetable = nil
         timetableEditVC.mode = .add
         timetableEditVC.completionHandler = { [weak self] timetable in
             if let model = timetable {
